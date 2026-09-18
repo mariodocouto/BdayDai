@@ -7,6 +7,7 @@
 
 export interface PhotoMemory {
   id: number;
+  order: number; // Ordem cronológica / lógica definida por Lucas (1, 2, 3...)
   title: string;
   caption: string;
   note: string;
@@ -19,6 +20,23 @@ export interface SiteConfig {
   recipientName: string;
   recipientNickname: string;
   senderName: string;
+
+  // Destaque de Aniversário e Foto de Casal
+  birthdayCouplePhoto: string;
+  birthdayTributeTitle: string;
+  birthdayTributeMessage: string;
+
+  // Frases da Narrativa Interativa ("Clicar e Andar")
+  storyPhrases: {
+    introGreeting: string;
+    introSub: string;
+    metTitle: string;
+    metText: string;
+    momentsIntro: string;
+    momentsSub: string;
+    birthdayTeaser: string;
+    reunionPromise: string;
+  };
 
   // Datas Históricas
   metDate: {
@@ -113,6 +131,23 @@ export const siteConfig: SiteConfig = {
   recipientNickname: "Dai",
   senderName: "Lucas",
 
+  // Foto de Casal de Destaque no Clímax do Aniversário
+  birthdayCouplePhoto: "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=1200&auto=format&fit=crop",
+  birthdayTributeTitle: "Feliz Aniversário, Meu Amor! 🎉🎂✨",
+  birthdayTributeMessage: "Hoje é o seu dia, Dai! O dia em que o mundo ganhou o sorriso mais lindo e eu ganhei a pessoa que transformou a minha vida. Celebramos a sua vida, a sua luz e exatamente 6 meses desde aquele 21 de março inesquecível. Que o seu novo ciclo seja radiante, cheio de paz, saúde e conquistas aí no Canadá. Eu tenho um orgulho infinito de você!",
+
+  // Frases da Narrativa Interativa ("Clicar e Andar")
+  storyPhrases: {
+    introGreeting: "Hoje é um dia muito especial...",
+    introSub: "E eu preparei algo para você ir descobrindo passo a passo, do jeitinho que a nossa história merece.",
+    metTitle: "Desde que a gente se conheceu...",
+    metText: "21 de março de 2026. Aquele instante em que nossos caminhos se cruzaram e tudo começou a fazer sentido.",
+    momentsIntro: "Foram momentos incríveis vivendo cada detalhe...",
+    momentsSub: "Cada risada boba, cada conversa até tarde, cada memória que a gente construiu...",
+    birthdayTeaser: "E agora... chegamos ao coração deste dia tão importante.",
+    reunionPromise: "E com a melhor promessa de todas: em breve a gente está junto!"
+  },
+
   // 21 de Março de 2026: Quando se conheceram
   metDate: {
     display: "21 de março de 2026",
@@ -192,6 +227,7 @@ export const siteConfig: SiteConfig = {
   photos: [
     {
       id: 1,
+      order: 1,
       title: "O Primeiro Sorriso",
       caption: "O instante em que percebi que meu coração já tinha dona.",
       note: "21.03.2026 — Onde tudo começou",
@@ -200,6 +236,7 @@ export const siteConfig: SiteConfig = {
     },
     {
       id: 2,
+      order: 2,
       title: "Aquele Olhar",
       caption: "Seus olhos têm a calma que eu sempre procurei no mundo.",
       note: "Lembrança viva",
@@ -208,6 +245,7 @@ export const siteConfig: SiteConfig = {
     },
     {
       id: 3,
+      order: 3,
       title: "Mãos Dadas",
       caption: "Mesmo com o oceano no meio, nossas mãos continuam entrelaçadas.",
       note: "Conexão inquebrável",
@@ -216,6 +254,7 @@ export const siteConfig: SiteConfig = {
     },
     {
       id: 4,
+      order: 4,
       title: "A Risada Mais Bonita",
       caption: "Ouvir você rir é o meu som favorito no planeta inteiro.",
       note: "Pura alegria",
@@ -224,6 +263,7 @@ export const siteConfig: SiteConfig = {
     },
     {
       id: 5,
+      order: 5,
       title: "Tardes com Você",
       caption: "Qualquer café ou conversa simples vira eterno ao seu lado.",
       note: "Dias inesquecíveis",
@@ -232,6 +272,7 @@ export const siteConfig: SiteConfig = {
     },
     {
       id: 6,
+      order: 6,
       title: "O Abraço de Despedida",
       caption: "Não foi um adeus, foi apenas o início da maior contagem regressiva da minha vida.",
       note: "Até logo, Canadá",
@@ -240,6 +281,7 @@ export const siteConfig: SiteConfig = {
     },
     {
       id: 7,
+      order: 7,
       title: "Chamadas de Vídeo e Fuso",
       caption: "A tela diminui a falta, mas só me dá mais certeza de que quero você por perto.",
       note: "Brasil ⇄ Canadá",
@@ -248,6 +290,7 @@ export const siteConfig: SiteConfig = {
     },
     {
       id: 8,
+      order: 8,
       title: "O Pôr do Sol Compartilhado",
       caption: "É o mesmo sol que se põe aqui no Brasil e aquece você aí no Canadá.",
       note: "Sob o mesmo céu",
@@ -256,6 +299,7 @@ export const siteConfig: SiteConfig = {
     },
     {
       id: 9,
+      order: 9,
       title: "A Sua Força",
       caption: "Tenho tanto orgulho da mulher corajosa e determinada que você é aí fora.",
       note: "Minha inspiração",
@@ -264,6 +308,7 @@ export const siteConfig: SiteConfig = {
     },
     {
       id: 10,
+      order: 10,
       title: "Planos para o Futuro",
       caption: "Cada passo que dou tem como destino construir uma vida com você.",
       note: "Para sempre",
@@ -272,6 +317,7 @@ export const siteConfig: SiteConfig = {
     },
     {
       id: 11,
+      order: 11,
       title: "O Sorriso que Ilumina",
       caption: "Nenhum frio do Canadá é capaz de apagar o calor que você carrega.",
       note: "Minha luz",
@@ -280,6 +326,7 @@ export const siteConfig: SiteConfig = {
     },
     {
       id: 12,
+      order: 12,
       title: "Quase Lá",
       caption: "O próximo registro dessa galeria será nós dois abraçados no aeroporto.",
       note: "24.10.2026 — O Reencontro",

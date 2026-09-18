@@ -78,3 +78,45 @@ export function triggerReunionCelebration() {
     });
   }, 250);
 }
+
+/**
+ * Explosão festiva grandiosa para o momento do FELIZ ANIVERSÁRIO!
+ */
+export function triggerBirthdayBlast() {
+  const duration = 5 * 1000;
+  const animationEnd = Date.now() + duration;
+  const colors = ['#f43f5e', '#be123c', '#fb7185', '#fda4af', '#f59e0b', '#fbbf24', '#ffffff'];
+
+  // Explosão central imediata
+  confetti({
+    particleCount: 80,
+    spread: 100,
+    origin: { y: 0.6 },
+    colors,
+    scalar: 1.2
+  });
+
+  const interval: ReturnType<typeof setInterval> = setInterval(() => {
+    const timeLeft = animationEnd - Date.now();
+    if (timeLeft <= 0) {
+      return clearInterval(interval);
+    }
+    const particleCount = 35 * (timeLeft / duration);
+
+    // Chuva dos dois lados alternada
+    confetti({
+      particleCount,
+      angle: 60,
+      spread: 70,
+      origin: { x: 0.1, y: 0.65 },
+      colors,
+    });
+    confetti({
+      particleCount,
+      angle: 120,
+      spread: 70,
+      origin: { x: 0.9, y: 0.65 },
+      colors,
+    });
+  }, 220);
+}

@@ -2,37 +2,37 @@
 
 @layer base {
   :root {
-    --font-serif: "Cormorant Garamond", Georgia, serif;
-    --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+    --font-serif: "Playfair Display", Georgia, serif;
+    --font-sans: "Inter", system-ui, sans-serif;
     --font-script: "Alex Brush", cursive;
   }
 }
 
 .font-serif {
-  font-family: "Cormorant Garamond", Georgia, serif;
+  font-family: "Playfair Display", Georgia, serif;
 }
 
 .font-sans {
-  font-family: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
 }
 
 .font-script {
   font-family: "Alex Brush", cursive;
 }
 
-/* Elegant custom scrollbar */
+/* Custom scrollbar for soft rose aesthetics */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #120e16;
+  background: #fff1f2;
 }
 ::-webkit-scrollbar-thumb {
-  background: #3e2739;
-  border-radius: 9999px;
+  background: #fda4af;
+  border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #6e3952;
+  background: #fb7185;
 }
 
 /* Atmospheric subtle shimmer and stars */

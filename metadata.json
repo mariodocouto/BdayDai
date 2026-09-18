@@ -1,6 +1,6 @@
 {
-  "name": "Para Dai • Contagem para o Reencontro",
-  "description": "Um presente de aniversário interativo e emocionante de Lucas para Daiane, celebrando 6 meses de amor e a contagem regressiva para o reencontro em 24 de outubro de 2026.",
+  "name": "Para Dai • Feliz Aniversário",
+  "description": "Hoje é um dia muito especial. Uma história interativa de amor e momentos para celebrar o aniversário da Dai, com a certeza de que em breve estaremos juntos.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
